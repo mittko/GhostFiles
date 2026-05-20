@@ -1,0 +1,39 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Document Base Layer -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#D83B01"
+        android:strokeWidth="2"
+        android:pathData="M25,10 H65 L80,25 V85 C80,87.8 77.8,90 75,90 H25 C22.2,90 20,87.8 20,85 V15 C20,12.2 22.2,10 25,10Z" />
+
+    <!-- Orange Header Bar -->
+    <path
+        android:fillColor="#D83B01"
+        android:pathData="M20,15 C20,12.2 22.2,10 25,10 H65 L80,25 V32 H20 V15Z" />
+
+    <!-- Corrected PPTX Text (All Caps and Uniform Size) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,17 H27 C28,17 29,17.5 29,18.5 C29,19.5 28,20 27,20 H25.5 V22 H24 V17 M25.5,18 V19 H27 C27.5,19 27.5,18 27,18 H25.5 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M31,17 H34 C35,17 36,17.5 36,18.5 C36,19.5 35,20 34,20 H32.5 V22 H31 V17 M32.5,18 V19 H34 C34.5,19 34.5,18 34,18 H32.5 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,17 H43 V18.5 H41.2 V22 H39.8 V18.5 H38 V17 Z" />
+    <!-- Aligned 'X' Path -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,17 L46.5,19 L45,21 H46.5 L47.2,20 L48,21 H49.5 L48,19 L49.5,17 H48 L47.2,18 L46.5,17 H45 Z" />
+
+    <!-- Revised PowerPoint 'P' Logo (Cleaner Geometry) -->
+    <path
+        android:fillColor="#D83B01"
+        android:pathData="M50,40 C38.9,40 30,48.9 30,60 C30,71.1 38.9,80 50,80 C61.1,80 70,71.1 70,60 C70,48.9 61.1,40 50,40 Z M46,50 H53 C56,50 58,52 58,55 C58,58 56,60 53,60 H46 V68 H44 V50 Z M46,52 V58 H53 C54.5,58 56,57 56,55 C56,53 54.5,52 53,52 H46 Z" />
+
+</vector>

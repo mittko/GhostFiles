@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="960"
+    android:viewportHeight="960">
+
+    <!-- Folder outline -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="60"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M80,760 L80,320 Q80,200 200,200 L400,200 Q440,200 480,280 L520,280 L800,280 Q880,280 880,360 L880,760 Q880,840 800,840 L160,840 Q80,840 80,760 Z"/>
+
+    <!-- Arrow horizontal line -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="60"
+        android:strokeLineCap="round"
+        android:pathData="M280,520 L680,520"/>
+
+    <!-- Arrow head -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="60"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M520,360 L680,520 L520,680"/>
+
+</vector>

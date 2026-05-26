@@ -59,7 +59,7 @@ Ghost Files uses the **AES (Advanced Encryption Standard)** algorithm in **CTR (
    git clone https://github.com/mittko/GhostFiles.git
    ```
 2. Open the project in **Android Studio**,
-3. Build (project build with gradle version 8.13 and android gradle plugin version 8.13.0 and run on a physical device (biometrics require real hardware)
+3. Build (project build with gradle version 8.13 and android gradle plugin version 8.13.0) and run on a physical device (biometrics require real hardware)
 4. Register your biometrics in device Settings if not already done
 5. Launch Ghost Files and start protecting your files
 

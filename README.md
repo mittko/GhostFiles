@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="app/src/main/icon_launcher_test-playstore.png" alt="Ghost Files Logo" width="120"/>
+  <img src="app/src/main/ic_launcher_test-playstore.png" alt="Ghost Files Logo" width="120"/>
 </p>
 
 # 👻 Ghost Files

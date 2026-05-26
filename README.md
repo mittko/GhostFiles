@@ -1,9 +1,12 @@
+<p align="center">
+  <img src="res/icon_launcher_test-playstore.png" alt="Ghost Files Logo" width="120"/>
+</p>
+
 # 👻 Ghost Files
 
 > **Your files. Invisible to everyone but you.**
 
-Ghost Files is an Android application that allows users to **encrypt and hide selected files** on their device using **biometric authentication**.
-Only the registered owner can access the hidden files — through their fingerprint scan or a custom drawn lock pattern — making unauthorized access virtually impossible.
+Ghost Files is an Android application that allows users to **encrypt and hide selected files** on their device using **biometric authentication**. Only the registered owner can access the hidden files — through their fingerprint scan or a custom drawn lock pattern — making unauthorized access virtually impossible.
 
 ---
 
@@ -70,12 +73,6 @@ Ghost Files uses the **AES (Advanced Encryption Standard)** algorithm in **CTR (
 - **Pattern Auth:** Custom drawn lock pattern with on-device encrypted storage
 - **Key Storage:** Android Keystore System
 - **Min SDK:** 23 | **Target SDK:** 34+
-
----
-
-## ⚠️ Disclaimer
-
-Ghost Files is intended for **personal privacy protection** of your own files. The developer is not responsible for any misuse of this application. Always comply with applicable laws and regulations in your jurisdiction.
 
 ---
 

@@ -56,6 +56,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
@@ -63,6 +64,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.core.net.toUri
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.datastore.core.DataStore
+import androidx.datastore.dataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
@@ -73,12 +75,11 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.fileencrpyptoraes256.ui.theme.FileEncrpyptorAes256Theme
-import com.example.fileencrpyptoraes256.utils.BytesConvertor
+import com.example.myapplication.utils.BytesConvertor
 import com.example.myapplication.models.PasswordViewModel
 import com.example.myapplication.prefs.getEncryptionKeyFromPrefs
 import com.example.myapplication.prefs.getIvFromPrefs
 import com.example.myapplication.transform.decryptBiometricKey
-import com.example.myapplication.transform.deleteOriginalFile
 import com.example.myapplication.transform.encryptFile
 import com.example.myapplication.uiboxes.AudioBox
 import com.example.myapplication.uiboxes.DocBox
@@ -169,6 +170,7 @@ class MainActivity : FragmentActivity() {
             var encryption by remember {
                 mutableStateOf(false)
             }
+
             var decryption by remember {
                 mutableStateOf(false)
             }
@@ -180,6 +182,7 @@ class MainActivity : FragmentActivity() {
             val multipleFileickerLauncher = rememberLauncherForActivityResult(
                 ActivityResultContracts.OpenMultipleDocuments()
             ) { uris ->
+
 
                if(uris.isEmpty()) return@rememberLauncherForActivityResult
 
@@ -334,15 +337,22 @@ class MainActivity : FragmentActivity() {
                     Scaffold(modifier = Modifier.fillMaxSize(),
                         bottomBar = {
 
-                            Column {
-                                val diff = viewModel.files.value.size - viewModel.fileMap.size
+                            val diff = viewModel.files.value.size - viewModel.fileMap.size
 
-                                if(diff > 0) {
-                                    Text(text = "You have $diff hidden files , unlock them to see it",
-                                        modifier = Modifier
-                                            .fillMaxWidth()
-                                            .padding(20.dp, 0.dp, 0.dp, 0.dp))
-                                }
+                            Column {
+
+                                   if(diff > 0) {
+                                        val fileWord = if(diff == 1) "file" else "files"
+                                        val pronoun = if(diff == 1) "it" else "them"
+                                        Text(text = "You have $diff hidden $fileWord.Tap the fingerprint icon to unlock and view $pronoun.",
+                                            style = MaterialTheme.typography.bodyMedium,
+                                            textAlign = TextAlign.Center,
+                                            modifier = Modifier
+                                                .fillMaxWidth()
+                                                .padding(horizontal = 16.dp))
+                                    }
+
+
 
                                 BottomAppBar(
 

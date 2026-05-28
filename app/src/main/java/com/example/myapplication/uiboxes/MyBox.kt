@@ -1,5 +1,6 @@
 package com.example.myapplication.uiboxes
 
+import android.R.attr.resizeMode
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -85,6 +86,7 @@ import com.example.myapplication.R
 import com.example.myapplication.models.FileModel
 import com.example.myapplication.models.PdfModel
 import com.example.myapplication.userDirectoryAsUri
+import com.example.myapplication.utils.ForcePortraitOrientation
 import fr.opensagres.poi.xwpf.converter.xhtml.XHTMLConverter
 import fr.opensagres.poi.xwpf.converter.xhtml.XHTMLOptions
 import kotlinx.coroutines.Dispatchers
@@ -629,6 +631,9 @@ fun VideoBox(file : FileModel) {
             Icon(imageVector = Icons.Default.PlayArrow, contentDescription = null)
         }
         if(openVideo) {
+
+           // ForcePortraitOrientation()
+
             videoFile?.let {
                 FullScreenDialog(file = file, onDismiss = {
                     openVideo = false
@@ -650,6 +655,7 @@ fun VideoStreamPlayer(videoFile : File) {
     // Initialize ExoPlayer
     val exoPlayer = remember {
         ExoPlayer.Builder(context).build().apply {
+
             setMediaItem(MediaItem.fromUri(videoUri))
             prepare()
             playWhenReady = true // Start automatically
@@ -674,14 +680,14 @@ fun VideoStreamPlayer(videoFile : File) {
             PlayerView(ctx).apply {
                 player = exoPlayer
                 useController = true
-                resizeMode = AspectRatioFrameLayout.RESIZE_MODE_FILL
+                resizeMode = AspectRatioFrameLayout.RESIZE_MODE_FIT
                 layoutParams = ViewGroup.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.MATCH_PARENT
                 )
             }
         },
-        modifier = Modifier.fillMaxWidth().fillMaxHeight().aspectRatio(9/16f)
+        modifier = Modifier.fillMaxWidth().fillMaxHeight().aspectRatio(16/9f)
     )
 }
 

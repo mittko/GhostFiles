@@ -102,15 +102,6 @@ fun encryptFile(
 
 
 
-fun deleteOriginalFile(context: Context, fileUri: Uri) {
-    try {
-        // This method works with URIs obtained via OpenMultipleDocuments
-        DocumentsContract.deleteDocument(context.contentResolver, fileUri)
-    } catch (e: Exception) {
-        e.printStackTrace()
-        // Handle edge cases where the provider still denies deletion (e.g., Read-Only Cloud folders)
-    }
-}
 
 fun decryptFileToByteArray(password:String, inputStream_: InputStream) : ByteArray {
     // Decode the Base64 password back to exactly 16 bytes

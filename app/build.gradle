@@ -20,7 +20,7 @@ android {
     }
     signingConfigs {
         release {
-            storeFile file("D:\\MyApplication2\\keystore.jks")
+            storeFile file("D:\\ghost files sighature\\keystore.jks")
             storePassword "myapplication2"
             keyAlias "myapplication2_alias"
             keyPassword "myapplication2"
